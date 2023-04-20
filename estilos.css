@@ -9,7 +9,11 @@ body {
 	background: #e0e0e0;
 	color: #1d1d1d;
 	justify-content: center;
-	background-image:url("https://imagenes.elpais.com/resizer/Z4RD4e0CsO1_BDjWgQq8QpizRHA=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2LXRH6TRDPP6EHA5EDIOQMGZ54.jpg")
+	background-image:url("https://imagenes.elpais.com/resizer/Z4RD4e0CsO1_BDjWgQq8QpizRHA=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2LXRH6TRDPP6EHA5EDIOQMGZ54.jpg");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size:cover;
 }
 .titulo-pagina{
 	font-family: 'Montserrat', sans-serif;

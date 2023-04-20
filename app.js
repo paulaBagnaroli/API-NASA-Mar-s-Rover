@@ -31,6 +31,7 @@ const cargarDatos= async() =>{
  }
          catch(error){
          console.log("error")};
+         
  }
 cargarDatos();
 let subtitulo = document.querySelector("h2")
