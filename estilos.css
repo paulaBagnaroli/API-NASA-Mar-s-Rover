@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+	justify-content: center;
+	background-image:url("https://imagenes.elpais.com/resizer/Z4RD4e0CsO1_BDjWgQq8QpizRHA=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2LXRH6TRDPP6EHA5EDIOQMGZ54.jpg")
+}
+.titulo-pagina{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	color:rgb(252, 252, 252);
+	text-align:center;
+	text-shadow: 4px 4px 2px rgba(168, 133, 198, 0.75);
+
+}
+
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color:rgb(14, 13, 13);
+	text-align:center;
+	text-shadow: 4px 4px 2px rgba(176, 172, 180, 0.75);
+	background-color: #fff;
+}
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+.contenedor .astros {
+	text-align: center;
+}
+
+.contenedor .astros .titulo {
+	font-size: 16px;
+	font-weight: 600;
+	color:white;
+}
+
+.contenedor .astros .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.contenedor .astros .poster:hover {
+border-radius: 100%;
+
+}
+.contenedor .astros h3{
+	font-size: 10px;
+	color:white;
+	background-color: #100b1d;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
