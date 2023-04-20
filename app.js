@@ -1,7 +1,21 @@
+let pagina =1
+const btnAnterior= document.querySelector("#anterior")
+const btnSiguiente= document.querySelector("#siguiente")
+btnSiguiente.addEventListener("click",(e)=>{
+    pagina= pagina +1
+    cargarDatos();    
+})
+btnAnterior.addEventListener("click",(e)=>{
+    pagina= pagina -1;
+    cargarDatos();
+})
+
 const cargarDatos= async() =>{
+    contenedor.innerHTML=null;
     try{
-     const respuesta= await fetch (`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2023-4-3&page=1&api_key=nTSFEdegLBKcBA7biDMbYnLaRjkO2xdreLD4CUh3
+     const respuesta= await fetch (`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2023-4-3&page=${pagina}&api_key=nTSFEdegLBKcBA7biDMbYnLaRjkO2xdreLD4CUh3
      `)
+     console.log(pagina)
      if (respuesta.status ===200){
          const datos=await respuesta.json()
          console.log(datos);
@@ -15,9 +29,7 @@ const cargarDatos= async() =>{
             <h3> Fecha terrestre:${element.earth_date}</h3>
             `
             contenedor.appendChild(astro)
-           
-
-         });
+    });
 
      }
      else if (respuesta.status=401){
@@ -31,7 +43,8 @@ const cargarDatos= async() =>{
  }
          catch(error){
          console.log("error")};
-         
+
+    
  }
 cargarDatos();
 let subtitulo = document.querySelector("h2")
