@@ -10,9 +10,9 @@ btnAnterior.addEventListener("click",(e)=>{
     cargarDatos();
 })
 
-const cargarDatos= async() =>{
+const cargarDatos= async() =>{ 
     contenedor.innerHTML=null;
-    try{
+    try{//Usamos fetch para acceder al contenido de la url. Al usar fetch nos devuelve una PROMESA, que va a ser almacenada en la varibale respuesta en este caso. Como es una promesa, le pones await, para que se ejecute cuando ya esté la respuesta. Await solo puede usarse en funciones asíncronas, por eso arriba a la función cargarDatos tenes que ponerle async. Además, cuando trabajas con funciones asíncronas tenes que usar try y catch.
      const respuesta= await fetch (`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2023-4-3&page=${pagina}&api_key=nTSFEdegLBKcBA7biDMbYnLaRjkO2xdreLD4CUh3
      `)
      console.log(pagina)
